@@ -30,3 +30,21 @@ window.addEventListener('scroll', function () {
     header.classList.remove('scroll')
   }
 })
+
+/* scrollreveal : mostra elementos quando descer a paxina */
+
+const scrollReveal = ScrollReveal({
+  origin: 'top',
+  distance: '30px',
+  duration: 700,
+  reset: true
+})
+
+scrollReveal.reveal(
+  `#home .image, #home .text,
+#about .image, #about .text,
+#services header, #services .card,
+#contact .text,  #contact .links
+`,
+  { interval: 100 }
+)

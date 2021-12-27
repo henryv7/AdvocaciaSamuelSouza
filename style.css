@@ -235,7 +235,7 @@ nav .icon-close {
   top: -1.5rem;
   right: 1.5rem;
 
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 nav.show div.icon-close {
@@ -353,4 +353,31 @@ nav.show div.icon-close {
 .card .title {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
+}
+
+/*==== contacts ============================ */
+#contact .grid {
+  gap: 4rem;
+}
+
+#contact .text p {
+  margin-bottom: 2rem;
+}
+
+#contact .button i,
+#contact ul li i {
+  font-size: 1.5rem;
+  margin-right: 0.623rem;
+}
+
+#contact ul.grid {
+  gap: 2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+}
+#contact ul li i {
+  color: var(--base-color);
 }
