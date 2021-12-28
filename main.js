@@ -44,7 +44,18 @@ scrollReveal.reveal(
   `#home .image, #home .text,
 #about .image, #about .text,
 #services header, #services .card,
-#contact .text,  #contact .links
+#contact .text,  #contact .links,
+footer .brand, footer .social
 `,
   { interval: 100 }
 )
+
+/* botao voltar para o topo */
+const backToTopButton = document.querySelector(.back_to_top)
+window,addEventListener('scroll', function(){
+if(window.scrolly >= 560) {
+  backToTopButton.classList.add('show')
+} else {
+  backToTopButton.classList.remove.('show')
+}
+})
