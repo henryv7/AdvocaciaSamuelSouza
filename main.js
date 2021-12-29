@@ -51,11 +51,11 @@ footer .brand, footer .social
 )
 
 /* botao voltar para o topo */
-const backToTopButton = document.querySelector(.back_to_top)
-window,addEventListener('scroll', function(){
-if(window.scrolly >= 560) {
-  backToTopButton.classList.add('show')
-} else {
-  backToTopButton.classList.remove.('show')
-}
+const backToTopButton = document.querySelector('.back-to-top')
+window.addEventListener('scroll', function () {
+  if (window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
 })
