@@ -32,6 +32,9 @@ img {
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
+
+  /* fonts */
+  --title-font-size: 1.875rem;
 }
 
 /*===  BASE ============================ */
@@ -40,14 +43,14 @@ html {
 }
 
 body {
-  font: 400 1rem 'DM Sans', sans-serif;
+  font: 400 var(--title-font-size) 'DM Sans', sans-serif;
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
 
 .title {
-  font: 700 1.875rem 'Poppins', sans-serif;
+  font: 700 var(--title-font-size) 'Poppins', sans-serif;
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
@@ -423,7 +426,7 @@ footer .social a:hover {
   right: 1rem;
   bottom: 1rem;
 
-  padding: 0.8rem;
+  padding: 0.5rem;
   clip-path: circle();
 
   font-size: 1.5rem;
@@ -444,4 +447,7 @@ footer .social a:hover {
 
 /*==== back to top ============================ */
 @media (min-width: 992px) {
+  .title {
+    font-size: 2.2rem;
+  }
 }
