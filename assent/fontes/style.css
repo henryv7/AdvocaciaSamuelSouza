@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?g10n2');
-  src:  url('fonts/icomoon.eot?g10n2#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?g10n2') format('truetype'),
-    url('fonts/icomoon.woff?g10n2') format('woff'),
-    url('fonts/icomoon.svg?g10n2#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?egbf4x');
+  src:  url('fonts/icomoon.eot?egbf4x#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?egbf4x') format('truetype'),
+    url('fonts/icomoon.woff?egbf4x') format('woff'),
+    url('fonts/icomoon.svg?egbf4x#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -57,6 +57,21 @@
 }
 .icon-pin:before {
   content: "\e902";
+}
+.icon-phone:before {
+  content: "\e90b";
+}
+.icon-telephone:before {
+  content: "\e90b";
+}
+.icon-contact:before {
+  content: "\e90b";
+}
+.icon-support:before {
+  content: "\e90b";
+}
+.icon-call:before {
+  content: "\e90b";
 }
 .icon-hammer:before {
   content: "\e909";

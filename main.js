@@ -21,7 +21,7 @@ for (const link of links) {
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', function () {
+function changeheaderWhenScroll() {
   if (window.scrollY >= navHeight) {
     // scroll é maior que a altura do header
     header.classList.add('scroll')
@@ -29,7 +29,7 @@ window.addEventListener('scroll', function () {
     // menor que a altura do header
     header.classList.remove('scroll')
   }
-})
+}
 
 /* scrollreveal : mostra elementos quando descer a paxina */
 
@@ -49,13 +49,33 @@ footer .brand, footer .social
 `,
   { interval: 100 }
 )
-
-/* botao voltar para o topo */
 const backToTopButton = document.querySelector('.back-to-top')
-window.addEventListener('scroll', function () {
+
+function backToTop() {
   if (window.scrollY >= 560) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
   }
+}
+/* menu ativo conforme a seção visivel na página */
+const section = document.querySelectorAll('main sections[id]')
+function activateMenuAtCurrentSection() {
+  const checkpoint = window.pageYofset + (window.innerHeight / 8) * 4
+
+  for (const secton of sections) {
+    const sectionTop = section.offsetHeight
+    const sectionHeight = section.offsetHeight
+    const sectionId = section.getAttribute('id')
+
+    const checkpointStart = checkpoint >= sectionTop
+    const checkpointEnd = checkpointTop + sectionHeight
+  }
+}
+
+/* When Scroll */
+window.addEventListener('scroll', function () {
+  changeheaderWhenScroll()
+  backToTop()
+  activateMenuAtCurrentSection()
 })
