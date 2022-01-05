@@ -172,8 +172,10 @@ nav ul li a {
   position: relative;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul i a.active {
   color: var(--base-color);
+ 
 }
 
 nav ul li a::after {
@@ -189,8 +191,11 @@ nav ul li a::after {
   transition: width 0.2s;
 }
 
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul i a.active::after {
   width: 100%;
+  nav ul li a.active
+
 }
 
 nav .menu {
@@ -490,9 +495,14 @@ footer .social a:hover {
 
   nav .menu ul li a.title {
     font: 400 1rem var(--body--font);
+    -webkit-font-smoothing: antialiased;
   }
-
-nav .icon-menu{
+  nav ul i a.active{
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
+  }
+  
+  nav .icon-menu{
   display: none;
 }
 /* layout */

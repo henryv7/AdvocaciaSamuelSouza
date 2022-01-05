@@ -59,17 +59,27 @@ function backToTop() {
   }
 }
 /* menu ativo conforme a seção visivel na página */
-const section = document.querySelectorAll('main sections[id]')
+const sections = document.querySelectorAll('main sections[id]')
 function activateMenuAtCurrentSection() {
-  const checkpoint = window.pageYofset + (window.innerHeight / 8) * 4
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
 
-  for (const secton of sections) {
-    const sectionTop = section.offsetHeight
+  for (const section of sections) {
+    const sectionTop = section.offsetTop
     const sectionHeight = section.offsetHeight
     const sectionId = section.getAttribute('id')
 
     const checkpointStart = checkpoint >= sectionTop
-    const checkpointEnd = checkpointTop + sectionHeight
+    const checkpointEnd = checkpointTop <= sectionTop + sectionHeight
+
+    if (checkpointStart && checkpointEnd) {
+      document
+        .querySelector('nav ul li a [href*=' + sectionId + ']')
+        .classList.add('active')
+    } else {
+      document
+        .querySelector('nav ul li a [href *=' + sectionId + ']')
+        .classList.remove('active')
+    }
   }
 }
 
