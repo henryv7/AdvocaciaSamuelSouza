@@ -27,7 +27,7 @@ img {
   /* HSL color mode */
   --base-color: hsl(var(--hue) 100% 12%);
   --base-color-second: hsl(var(--hue) 100% 12%);
-  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --base-color-alt: hsl(var(--hue) 50% 40%);
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
@@ -120,7 +120,7 @@ body {
 }
 
 .section header strong {
-  color: var(--base-color);
+  color: var(--base-color-second);
 }
 
 #header {
@@ -174,8 +174,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul i a.active {
-  color: var(--base-color);
- 
+  color: var(--base-color-alt);
 }
 
 nav ul li a::after {
@@ -194,8 +193,6 @@ nav ul li a::after {
 nav ul li a:hover::after,
 nav ul i a.active::after {
   width: 100%;
-  nav ul li a.active
-
 }
 
 nav .menu {
@@ -494,10 +491,10 @@ footer .social a:hover {
   }
 
   nav .menu ul li a.title {
-    font: 400 1rem var(--body--font);
+    font: 400 1.2rem var(--body--font);
     -webkit-font-smoothing: antialiased;
   }
-  nav ul i a.active{
+  nav .menu ul li a.title.active{
     font-weight: bold;
     -webkit-font-smoothing: auto;
   }

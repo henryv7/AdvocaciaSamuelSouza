@@ -59,7 +59,7 @@ function backToTop() {
   }
 }
 /* menu ativo conforme a seção visivel na página */
-const sections = document.querySelectorAll('main sections[id]')
+const sections = document.querySelectorAll('main section[id]')
 function activateMenuAtCurrentSection() {
   const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
 
@@ -69,15 +69,15 @@ function activateMenuAtCurrentSection() {
     const sectionId = section.getAttribute('id')
 
     const checkpointStart = checkpoint >= sectionTop
-    const checkpointEnd = checkpointTop <= sectionTop + sectionHeight
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight
 
     if (checkpointStart && checkpointEnd) {
       document
-        .querySelector('nav ul li a [href*=' + sectionId + ']')
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
         .classList.add('active')
     } else {
       document
-        .querySelector('nav ul li a [href *=' + sectionId + ']')
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
         .classList.remove('active')
     }
   }
